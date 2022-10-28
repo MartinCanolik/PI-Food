@@ -13,7 +13,7 @@ export const SET_STATUS = "SET_STATUS";
 export const getRecipes = () => {
 	return async (dispatch) => {
 		try {
-			const { data } = await axios.get(`http://localhost:3001/recipes`);
+			const { data } = await axios.get(`/recipes`);
 			const recipes = data;
 
 			return dispatch({
@@ -29,9 +29,7 @@ export const getRecipes = () => {
 export const getRecipesByName = (query) => {
 	return async (dispatch) => {
 		try {
-			const { data } = await axios(
-				`http://localhost:3001/recipes?name=${query}`
-			);
+			const { data } = await axios(`/recipes?name=${query}`);
 
 			return dispatch({
 				type: GET_RECIPES_BY_NAME,
@@ -46,7 +44,7 @@ export const getRecipesByName = (query) => {
 export const getDiets = () => {
 	return async (dispatch) => {
 		try {
-			const { data } = await axios(`http://localhost:3001/diets`);
+			const { data } = await axios(`/diets`);
 
 			return dispatch({
 				type: GET_DIETS,
@@ -61,7 +59,7 @@ export const getDiets = () => {
 export const postRecipe = (form) => {
 	return async (dispatch) => {
 		try {
-			const { data } = await axios.post(`http://localhost:3001/recipes`, form);
+			const { data } = await axios.post(`/recipes`, form);
 			const recipe = data;
 			console.log(recipe);
 
@@ -78,7 +76,7 @@ export const postRecipe = (form) => {
 export const getDetail = (id) => {
 	return async (dispatch) => {
 		try {
-			const { data } = await axios.get(`http://localhost:3001/recipes/${id}`);
+			const { data } = await axios.get(`/recipes/${id}`);
 
 			return dispatch({
 				type: GET_RECIPE_BY_ID,
@@ -100,9 +98,7 @@ export const setOrderByAz = (sortedRecipes) => {
 export const orderByDiet = (diet) => {
 	return async (dispatch) => {
 		try {
-			const { data } = await axios.get(
-				`http://localhost:3001/recipes/?diet=${diet}`
-			);
+			const { data } = await axios.get(`/recipes/?diet=${diet}`);
 
 			return dispatch({
 				type: SET_ORDER_BY_DIET,
