@@ -8,7 +8,11 @@ const Home = () => {
 	const status = useSelector((state) => state.status);
 
 	if (status === "loading") {
-		return <Loading />;
+		return (
+			<S.loadingContainer>
+				<Loading />
+			</S.loadingContainer>
+		);
 	}
 
 	return (

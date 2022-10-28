@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from "../../GlobalStyle.styled";
 
 export const container = styled.div`
 	display: flex;
@@ -9,6 +10,7 @@ export const container = styled.div`
 	margin-top: 7%;
 	border-radius: 30px;
 	opacity: 85%;
+	background-color: ${colors.BACKGROUND};
 `;
 
 export const image = styled.img`
