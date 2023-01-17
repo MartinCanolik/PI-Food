@@ -35,6 +35,6 @@ export const Wrapper = styled.div`
 export const brand = styled.img`
 	height: 30px;
 	position: absolute;
-	left: 152px;
+	left: 220px;
 	opacity: 70%;
 `;

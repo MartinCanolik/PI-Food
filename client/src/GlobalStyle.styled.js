@@ -24,6 +24,7 @@ export const GlobalStyle = createGlobalStyle`
 	list-style-type: none;
 	text-decoration: none;
 
+
 	/* color: ${colors.TEXT_BLACK}; */
 
 }

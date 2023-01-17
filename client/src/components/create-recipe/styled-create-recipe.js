@@ -13,7 +13,7 @@ export const diet_button = styled(Button)`
 	left: 0px;
 	right: 0px;
 	bottom: 0;
-	font-size: 8px;
+	font-size: 10px;
 	padding: 5px;
 	border: 1px solid black;
 	transition: none;
