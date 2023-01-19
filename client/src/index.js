@@ -8,10 +8,9 @@ import store from "./redux/store";
 import dotenv from "dotenv";
 import axios from "axios";
 dotenv.config();
-const url = `${process.env.URL}`;
-console.log(url);
-console.log("hola");
-axios.defaults.baseURL = process.env.URL || "http://localhost:3001";
+
+axios.defaults.baseURL =
+	"https://pi-back-production-0315.up.railway.app" || "http://localhost:3001";
 
 ReactDOM.render(
 	<Provider store={store}>
